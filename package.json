@@ -1,28 +1,77 @@
 {
-  "name": "shaadkit",
+  "name": "shaadkit-frontend-boilerplate",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "bun@1.4.2",
+  "author": {
+    "email": "shaadcode@gmail.com",
+    "name": "seyed mojtaba shadab",
+    "url": "https://shaadcode.ir"
+  },
   "scripts": {
     "dev": "next dev",
+    "typegen": "next typegen",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint:base": "eslint",
+    "typecheck": "tsc --noEmit",
+    "stylelint": "stylelint \"**/*.css\" --cache --cache-location ./.cache -c ./stylelint.config.mjs",
+    "analyze": "ANALYZE=true next build",
+    "lint": "npm run eslint:base && npm run stylelint",
+    "lint:fix": "npm run eslint:base -- --fix && npm run stylelint -- --fix",
+    "eslint:base": "eslint . --cache --cache-location .cache/eslint/ --no-warn-ignored",
+    "storybook": "storybook dev -p 0313",
+    "build-storybook": "storybook build"
   },
+  "maintainers": [
+    {
+      "email": "shaadcode@gmail.com",
+      "name": "seyed mojtaba shadab",
+      "url": "https://shaadcode.ir"
+    }
+  ],
   "dependencies": {
+    "@mantine/core": "^9.6.1",
+    "@mantine/hooks": "^9.6.1",
     "next": "16.3.5",
+    "next-intl": "^4.14.4",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^9.5.1",
+    "@eslint-react/eslint-plugin": "^5.19.0",
+    "@next/bundle-analyzer": "^16.3.5",
+    "@next/eslint-plugin-next": "^16.3.5",
+    "@storybook/addon-a11y": "^10.6.0",
+    "@storybook/addon-docs": "^10.6.0",
+    "@storybook/addon-mcp": "^10.6.0",
+    "@storybook/addon-themes": "^10.6.0",
+    "@storybook/addon-vitest": "^10.6.0",
+    "@storybook/nextjs-vite": "^10.6.0",
+    "@total-typescript/ts-reset": "^0.6.1",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@typescript/native": "npm:typescript@^7.0.2",
+    "@vitest/browser-playwright": "latest",
+    "@vitest/coverage-v8": "latest",
     "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "^9",
+    "eslint": "^10.10.0",
     "eslint-config-next": "16.3.5",
-    "typescript": "^5"
+    "eslint-plugin-react-refresh": "^0.5.6",
+    "eslint-plugin-storybook": "^10.6.0",
+    "playwright": "latest",
+    "postcss": "^8.5.28",
+    "postcss-preset-mantine": "^1.18.0",
+    "postcss-simple-vars": "^7.0.1",
+    "storybook": "^10.6.0",
+    "stylelint": "^17.15.0",
+    "stylelint-config-standard": "^40.0.0",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "vite": "latest",
+    "vitest": "latest"
   },
-  "packageManager": "bun@1.4.2",
   "ignoreScripts": [
     "sharp",
     "unrs-resolver"

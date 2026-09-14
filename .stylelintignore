@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
@@ -31,7 +29,8 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
-.env*
+.env
+.env.production
 
 # vercel
 .vercel
@@ -40,7 +39,15 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.cache
-
 *storybook.log
-storybook-static
+
+# Playwright test results
+test-results/
+playwright-report/
+playwright/.cache/
+
+
+__dev__/*
+
+
+public/storybook

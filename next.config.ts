@@ -1,8 +1,27 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
+import bundleAnalyzer from '@next/bundle-analyzer'
+import createNextIntlPlugin from 'next-intl/plugin'
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const withBundleAnalyzer = bundleAnalyzer({
+  // eslint-disable-next-line node/prefer-global/process
+  enabled: process.env.ANALYZE === 'true',
+})
+
+const baseConfig: NextConfig = {
   reactCompiler: true,
-};
+  poweredByHeader: false,
+  reactStrictMode: true,
+  devIndicators: {
+    position: 'bottom-right',
+  },
+  experimental: {
+    optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
+    turbopackRustReactCompiler: true,
+  },
+}
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin(({
+  requestConfig: './src/shared/config/nextIntl/request.ts',
+}))
+
+export default withBundleAnalyzer(withNextIntl(baseConfig))

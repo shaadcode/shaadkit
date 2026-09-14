@@ -1,0 +1,88 @@
+{
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+
+  // Auto fix
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
+  },
+
+  // Silent the stylistic rules in your IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off", "fixable": true },
+    { "rule": "format/*", "severity": "off", "fixable": true },
+    { "rule": "*-indent", "severity": "off", "fixable": true },
+    { "rule": "*-spacing", "severity": "off", "fixable": true },
+    { "rule": "*-spaces", "severity": "off", "fixable": true },
+    { "rule": "*-order", "severity": "off", "fixable": true },
+    { "rule": "*-dangle", "severity": "off", "fixable": true },
+    { "rule": "*-newline", "severity": "off", "fixable": true },
+    { "rule": "*quotes", "severity": "off", "fixable": true },
+    { "rule": "*semi", "severity": "off", "fixable": true }
+  ],
+
+  // Enable eslint for all supported languages
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "json5",
+    "jsonc",
+    "yaml",
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "astro",
+    "svelte",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
+  ],
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "search.exclude": {
+    "node_modules": true,
+    ".next": true,
+    "next-env.d.ts": true,
+    "bun.lock": true
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "js/ts.experimental.useTsgo": true,
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
+  "js/ts.preferences.autoImportSpecifierExcludeRegexes": [
+    // useRouter should be imported from `next/navigation` instead of `next/router`
+    "next/router",
+    "^(node:)?os$",
+    // By using the Anchor component from Mantine, you get the benefits of Mantine, Next.js, and Next-Intl at the same time.
+    "@/config/nextIntl/navigation",
+    "next/dist/client/link",
+    "next/dist/api/link",
+    "process",
+    "node:process",
+    "console",
+    "node:inspector",
+    "inspector",
+    "node:inspector/promises",
+    "inspector/promises"
+  ],
+  "js/ts.preferences.autoImportFileExcludePatterns": [
+    "node:console"
+  ],
+  "js/ts.preferences.preferTypeOnlyAutoImports": true, // Prefer type-only imports
+  "editor.wordWrap": "on",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.tabCompletion": "on",
+  "js/ts.tsdk.path": "node_modules/typescript/lib"
+}
