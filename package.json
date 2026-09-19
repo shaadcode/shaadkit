@@ -8,6 +8,7 @@
     "name": "seyed mojtaba shadab",
     "url": "https://shaadcode.ir"
   },
+  "engines": { "node": ">=20", "bun": ">=1.4" },
   "scripts": {
     "dev": "next dev",
     "typegen": "next typegen",
@@ -20,7 +21,7 @@
     "lint": "npm run eslint:base && npm run stylelint",
     "lint:fix": "npm run eslint:base -- --fix && npm run stylelint -- --fix",
     "eslint:base": "eslint . --cache --cache-location .cache/eslint/ --no-warn-ignored",
-    "storybook": "storybook dev -p 0313",
+    "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "maintainers": [
@@ -71,13 +72,5 @@
     "typescript": "npm:@typescript/typescript6@^6.0.2",
     "vite": "latest",
     "vitest": "latest"
-  },
-  "ignoreScripts": [
-    "sharp",
-    "unrs-resolver"
-  ],
-  "trustedDependencies": [
-    "sharp",
-    "unrs-resolver"
-  ]
+  }
 }

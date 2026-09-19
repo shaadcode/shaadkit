@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div   style='display:flex; justify-content: center;'>
+  <img
+  width='600'
+  alt="Precedent – Building blocks for your Next project"
+  src="./resource/Nextjs-Front-End-Boilerplate banner.png" />
+</div>
 
-## Getting Started
+<br/>
 
-First, run the development server:
+<h1 align="center">
+Shaadkit</h1>
+
+<p align="center">
+  A modern, batteries-included Next.js frontend boilerplate - ready for production.
+</p>
+
+
+
+## ✨ Why ShaadKit?
+
+Ordinary boilerplates are just a simple starting point. **ShaadKit** is a complete, opinionated foundation that solves every concern of a professional project from day one:
+
+- ⚡ **Bun** as Package Manager — blazing-fast install & run
+
+- 🧩 **Mantine v9** — powerful and accessible components
+
+- 🌍 **next-intl** — internationalization (i18n) ready from the start
+
+- 📖 **Storybook 10** — component-driven development with MCP & A11y
+
+- 🧪 **Vitest + Playwright** — fast and reliable testing
+
+- 🎨 **Stylelint + ESLint (Antfu Config)** — top-tier code quality
+
+- 🔍 **Bundle Analyzer** — analyze and optimize your bundle
+
+- ⚛️ **React 19 + React Compiler** — the latest React with auto-optimization
+
+
+
+
+
+## 🛠️ Tech Stack
+
+| Category          | Technology                                     |
+| ----------------- | ---------------------------------------------- |
+| **Framework**     | Next.js 16.3.5                                 |
+| **Language**      | TypeScript 6 (and 7)                           |
+| **UI**            | Mantine v9 + PostCSS Preset Mantine            |
+| **State/Data**    | React 19 + React Compiler                      |
+| **i18n**          | next-intl v4                                   |
+| **Testing**       | Vitest + Playwright + Testing Library          |
+| **Documentation** | Storybook 10 (Docs, A11y, Themes, Vitest, MCP) |
+| **Lint/Format**   | ESLint 10 + Stylelint 17 + Antfu Config        |
+| **Tooling**       | Bun, Vite, Bundle Analyzer                     |
+
+## 📦 Installation & Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+# Clone the project
+git clone <repository-url>
+cd shaadkit-frontend-boilerplate
+
+# Install dependencies with Bun
+bun install
+
+# Run the development server
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open your browser at: [http://localhost:3000](http://localhost:3000/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## 🎯 Key Features
 
-To learn more about Next.js, take a look at the following resources:
+- ✅ **Production-Ready** — optimized settings from the start
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ✅ **Component-Driven** — integrated Storybook for design & documentation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- ✅ **Testable** — Vitest + Playwright in a real browser
 
-## Deploy on Vercel
+- ✅ **Accessible (A11y)** — Storybook A11y addon included
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ✅ **Multilingual** — full i18n support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- ✅ **Code Quality** — automatic lint & format with best-in-class configs
+
+- ✅ **Bundle Optimization** — analyze and reduce output size
+
+
+
+## 🤝 Contributing
+
+We welcome contributions! Before submitting a PR, please:
+
+1. Fork the project
+
+2. Create a new branch (`git checkout -b feature/amazing-feature`)
+
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+
+4. Push to the branch (`git push origin feature/amazing-feature`)
+
+5. Open a Pull Request
+
+
+
+## 📄 License
+
+This project is released under the **MIT** License.
+
+
+
+## 📬 Contact Us
+
+- 🌐 Website: [shaadcode.ir](https://shaadcode.ir/)
+
+- 📧 Email: shaadcode@gmail.com
+
+- 👤 Author: **Seyed Mojtaba Shadab**
+
+
+
+⭐ If this project was useful to you, give it a star!
+
+
+
+**Made with ❤️ by [ShaadCode](https://shaadcode.ir/)**
