@@ -11,7 +11,7 @@
 Shaadkit</h1>
 
 <p align="center">
-  A modern, batteries-included Next.js frontend boilerplate - ready for production.
+  My production-ready Next.js foundation for modern web applications.
 </p>
 
 ShaadKit is my personal, opinionated foundation for starting new Next.js projects.
@@ -68,17 +68,21 @@ Ordinary boilerplates are just a simple starting point. **ShaadKit** is a comp
 
 ## 🛠️ Tech Stack
 
-| Category          | Technology                                     |
-| ----------------- | ---------------------------------------------- |
-| **Framework**     | Next.js 16.3.5                                 |
-| **Language**      | TypeScript 6 (and 7)                           |
-| **UI**            | Mantine v9 + PostCSS Preset Mantine            |
-| **State/Data**    | React 19 + React Compiler                      |
-| **i18n**          | next-intl v4                                   |
-| **Testing**       | Vitest + Playwright + Testing Library          |
-| **Documentation** | Storybook 10 (Docs, A11y, Themes, Vitest, MCP) |
-| **Lint/Format**   | ESLint 10 + Stylelint 17 + Antfu Config        |
-| **Tooling**       | Bun, Vite, Bundle Analyzer                     |
+| Category              | Technology            |
+| --------------------- | --------------------- |
+| Framework             | Next.js               |
+| Runtime               | React                 |
+| Language              | TypeScript            |
+| UI                    | Mantine               |
+| Styling               | PostCSS / CSS Modules |
+| Internationalization  | next-intl             |
+| Component Development | Storybook             |
+| Testing               | Vitest + Playwright   |
+| Code Quality          | ESLint + Stylelint    |
+| Package Manager       | Bun                   |
+| Build Tooling         | Next.js / Vite        |
+| Performance           | Bundle Analyzer       |
+| React Optimization    | React Compiler        |
 
 ## 📦 Installation & Setup
 
@@ -112,15 +116,11 @@ Then open your browser at: [http://localhost:3000](http://localhost:3000/)
 
 - ✅ **Bundle Optimization** — analyze and reduce output size
 
-
-
 ## 🗺 Roadmap
 
 ShaadKit will evolve as the underlying ecosystem evolves.
 
 The focus is on maintaining a small, reliable, and opinionated foundation rather than continuously adding features for the sake of feature count.
-
-
 
 ## 🤝 Contributing
 
@@ -136,16 +136,12 @@ We welcome contributions! Before submitting a PR, please:
 
 5. Open a Pull Request
 
-
-
 ## 📄 License
 
 This project is released under the **MIT** License.
-
-
 
 ## ✒ Author
 
 Built and maintained by [**Seyed Mojtaba Shadab(ShaadCode)**]([https://shaadcoe.ir/](https://shaadcode.ir/)).
 
-If you find ShaadKit useful, consider giving the repository a ⭐
+If you find ShaadKit useful, consider giving the repository a ⭐My production-ready Next.js foundation for modern web applications.
