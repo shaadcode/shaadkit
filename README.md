@@ -70,8 +70,7 @@ Ordinary boilerplates are just a simple starting point. **ShaadKit** is a comp
 
 | Category              | Technology            |
 | --------------------- | --------------------- |
-| Framework             | Next.js               |
-| Runtime               | React                 |
+| Framework             | Next.js(React)        |
 | Language              | TypeScript            |
 | UI                    | Mantine               |
 | Styling               | PostCSS / CSS Modules |
@@ -83,6 +82,18 @@ Ordinary boilerplates are just a simple starting point. **ShaadKit** is a comp
 | Build Tooling         | Next.js / Vite        |
 | Performance           | Bundle Analyzer       |
 | React Optimization    | React Compiler        |
+
+## 🧠What is the philosophy of this stack?
+
+When you first look at this repo, you might see tools you're not currently using — but I believe in every project, you should consider the possibility that it might grow into a large project in the future!
+
+The core technologies of ShaadKit are light and simple enough, they don't have a steep learning curve, and they can be used very quickly!
+
+Some technologies also have secondary benefits, like next-intl. It's not just for internationalization, although that's its main purpose! You can use next-intl to manage the static texts of your site. You no longer need to open different files to change a message in different parts of the site.
+
+In my opinion, ShaadKit can be used both for an MVP and for a scalable website. Even though its main focus is on the frontend, with a few changes it can also be used in a full-stack project.
+
+
 
 ## 📦 Installation & Setup
 
