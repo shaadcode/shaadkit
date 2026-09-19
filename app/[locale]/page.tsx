@@ -1,26 +1,27 @@
+import { Button, Code, Stack, Text, Title } from '@mantine/core'
 import Image from 'next/image'
-import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <div className={styles['page']}>
-
-      <main className={styles['main']}>
+    <Stack h="100%" bg="black" justify="center" align="center">
+      <Stack style={{ flexDirection: 'column' }} component="main">
         <Image
-          className={styles['logo']}
+
           src="/next.svg"
           alt="Next.js logo"
           width={100}
           height={20}
           priority
         />
-        <div className={styles['intro']}>
-          <h1>
-            <code className={styles['code']}>ShaadKit</code>
+        <div>
+          <Title tt="capitalize">
+            <Code fz={36}>ShaadKit</Code>
             {' '}
-            — your Next.js starting point
-          </h1>
-          <p>
+            —
+            <br />
+            your Next.js starting point
+          </Title>
+          <Text maw={400}>
             A modern, batteries-included Next.js frontend boilerplate - ready for production.
             {' '}
             <a
@@ -32,9 +33,9 @@ export default function Home() {
             </a>
             {' '}
             to get started.
-          </p>
+          </Text>
         </div>
-        <div className={styles['ctas']}>
+        <div>
           {/* <a
             className={styles['primary']}
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -51,15 +52,23 @@ export default function Home() {
             Deploy Now
           </a> */}
           <a
-            className={styles['secondary']}
-            href="https://github.com/shaadcode/shaadkit"
+
             target="_blank"
             rel="noopener noreferrer"
           >
-            View on Github
+
           </a>
+          <Button
+            variant="outline"
+            radius={999}
+            component="a"
+            target="_blank"
+            href="https://github.com/shaadcode/shaadkit"
+          >
+            View on Github
+          </Button>
         </div>
-      </main>
-    </div>
+      </Stack>
+    </Stack>
   )
 }
