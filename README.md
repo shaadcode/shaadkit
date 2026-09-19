@@ -144,4 +144,4 @@ This project is released under the **MIT** License.
 
 Built and maintained by [**Seyed Mojtaba Shadab(ShaadCode)**]([https://shaadcoe.ir/](https://shaadcode.ir/)).
 
-If you find ShaadKit useful, consider giving the repository a ⭐My production-ready Next.js foundation for modern web applications.
+If you find ShaadKit useful, consider giving the repository a ⭐
