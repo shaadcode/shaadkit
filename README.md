@@ -14,7 +14,37 @@ Shaadkit</h1>
   A modern, batteries-included Next.js frontend boilerplate - ready for production.
 </p>
 
+ShaadKit is my personal, opinionated foundation for starting new Next.js projects.
 
+It brings together the tools, conventions, architecture, and developer experience I use as a baseline across projects — so I can spend less time rebuilding infrastructure and more time building the actual product.
+
+> **ShaadKit is a foundation, not a finished application.**
+
+Instead of starting from:
+
+```tex
+create-next-app
+        ↓
+    configure
+        ↓
+fix conventions
+        ↓
+    add tooling
+        ↓
+    add testing
+        ↓
+add UI infrastructure
+        ↓
+finally start building
+```
+
+you can start from:
+
+```
+    ShaadKit
+        ↓
+build the product
+```
 
 ## ✨ Why ShaadKit?
 
@@ -35,10 +65,6 @@ Ordinary boilerplates are just a simple starting point. **ShaadKit** is a comp
 - 🔍 **Bundle Analyzer** — analyze and optimize your bundle
 
 - ⚛️ **React 19 + React Compiler** — the latest React with auto-optimization
-
-
-
-
 
 ## 🛠️ Tech Stack
 
@@ -70,8 +96,6 @@ bun dev
 
 Then open your browser at: [http://localhost:3000](http://localhost:3000/)
 
-
-
 ## 🎯 Key Features
 
 - ✅ **Production-Ready** — optimized settings from the start
@@ -87,6 +111,14 @@ Then open your browser at: [http://localhost:3000](http://localhost:3000/)
 - ✅ **Code Quality** — automatic lint & format with best-in-class configs
 
 - ✅ **Bundle Optimization** — analyze and reduce output size
+
+
+
+## 🗺 Roadmap
+
+ShaadKit will evolve as the underlying ecosystem evolves.
+
+The focus is on maintaining a small, reliable, and opinionated foundation rather than continuously adding features for the sake of feature count.
 
 
 
@@ -112,18 +144,8 @@ This project is released under the **MIT** License.
 
 
 
-## 📬 Contact Us
+## ✒ Author
 
-- 🌐 Website: [shaadcode.ir](https://shaadcode.ir/)
+Built and maintained by [**Seyed Mojtaba Shadab(ShaadCode)**]([https://shaadcoe.ir/](https://shaadcode.ir/)).
 
-- 📧 Email: shaadcode@gmail.com
-
-- 👤 Author: **Seyed Mojtaba Shadab**
-
-
-
-⭐ If this project was useful to you, give it a star!
-
-
-
-**Made with ❤️ by [ShaadCode](https://shaadcode.ir/)**
+If you find ShaadKit useful, consider giving the repository a ⭐
