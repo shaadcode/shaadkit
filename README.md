@@ -59,7 +59,7 @@ Ordinary boilerplates are just a simple starting point. **ShaadKit** is a comp
 ```bash
 # Clone the project
 git clone https://github.com/shaadcode/shaadkit.git
-cd shaadkit-frontend-boilerplate
+cd shaadkit
 
 # Install dependencies with Bun
 bun install
