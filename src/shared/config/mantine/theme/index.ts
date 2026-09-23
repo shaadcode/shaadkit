@@ -4,5 +4,6 @@ import { components } from './components'
 export function themeFactory() {
   return createTheme({
     components,
+    primaryColor: 'orange',
   })
 }
