@@ -97,6 +97,10 @@ In my opinion, ShaadKit can be used both for an MVP and for a scalable website. 
 
 ## 📦 Installation & Setup
 
+### Prerequisites
+
+Before starting, make sure you have installed at least Node version 24 and the latest version of Bun!
+
 ```bash
 # Clone the project
 git clone https://github.com/shaadcode/shaadkit.git
@@ -126,6 +130,10 @@ Then open your browser at: [http://localhost:3000](http://localhost:3000/)
 - ✅ **Code Quality** — automatic lint & format with best-in-class configs
 
 - ✅ **Bundle Optimization** — analyze and reduce output size
+
+- ✅ **Integrated technologies** — The `Image` and `Anchor` components have been integrated with Next.js and Next-intl.
+
+
 
 ## 🗺 Roadmap
 
