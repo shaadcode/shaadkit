@@ -1,0 +1,126 @@
+{
+  "rem function": {
+    "scope": "postcss,css",
+    "prefix": "rem",
+    "body": ["rem(${1:size}px)"],
+    "description": "Convert px to rem"
+  },
+  "em function": {
+    "scope": "postcss,css",
+    "prefix": "em",
+    "body": ["em(${1:size}px)"],
+    "description": "Convert px to em (for media queries)"
+  },
+    "light-dark function": {
+    "scope": "postcss,css",
+    "prefix": "light-dark",
+    "body": ["light-dark(${1:color1},${2:color2})"],
+    "description": "alternative to light and dark mixins"
+  },
+    "alpha function": {
+    "scope": "postcss,css",
+    "prefix": "alpha",
+    "body": ["alpha(var(--mantine-color-${1:color}-${1:shade}), 0.5)"],
+    "description": " add alpha channel"
+  },
+    "lighten function": {
+    "scope": "postcss,css",
+    "prefix": "lighten",
+    "body": ["lighten(var(--mantine-color-${1:color}-${2:shade}), 0.5)"],
+  },
+   "darken function": {
+    "scope": "postcss,css",
+    "prefix": "darken",
+    "body": ["darken(var(--mantine-color-${1:color}-${2:shade}), 0.5)"],
+  },
+  "dark mixin": {
+    "scope": "postcss,css",
+    "prefix": "dark",
+    "body": ["@mixin dark {", "\t$0", "}"],
+    "description": "Mantine dark color scheme mixin"
+  },
+  "light mixin": {
+    "scope": "postcss,css",
+    "prefix": "light",
+    "body": ["@mixin light {", "\t$0", "}"],
+    "description": "Mantine light color scheme mixin"
+  },
+  "dark-root mixin": {
+    "scope": "postcss,css",
+    "prefix": "dark-root",
+    "body": ["@mixin dark-root {", "\t$0", "}"],
+    "description": "Mantine dark-root mixin (for :root/html)"
+  },
+  "light-root mixin": {
+    "scope": "postcss,css",
+    "prefix": "light-root",
+    "body": ["@mixin light-root {", "\t$0", "}"],
+    "description": "Mantine light-root mixin (for :root/html)"
+  },
+  "smaller-than mixin": {
+    "scope": "postcss,css",
+    "prefix": "smaller-than",
+    "body": ["@mixin smaller-than $$mantine-breakpoint-${1:lg} {", "\t$0", "}"],
+    "description": "Mantine smaller-than breakpoint mixin"
+  },
+  "larger-than mixin": {
+    "scope": "postcss,css",
+    "prefix": "larger-than",
+    "body": ["@mixin larger-than $$mantine-breakpoint-${1:lg} {", "\t$0", "}"],
+    "description": "Mantine larger-than breakpoint mixin"
+  },
+  "hover mixin": {
+    "scope": "postcss,css",
+    "prefix": "hover",
+    "body": ["@mixin hover {", "\t$0", "}"],
+    "description": "Mantine hover mixin"
+  },
+  "rtl mixin": {
+    "scope": "postcss,css",
+    "prefix": "rtl",
+    "body": ["@mixin rtl {", "\t$0", "}"],
+    "description": "Mantine rtl mixin (dir=\"rtl\")"
+  },
+  "ltr mixin": {
+    "scope": "postcss,css",
+    "prefix": "ltr",
+    "body": ["@mixin ltr {", "\t$0", "}"],
+    "description": "Mantine ltr mixin (dir=\"ltr\")"
+  },
+  "not-rtl mixin": {
+    "scope": "postcss,css",
+    "prefix": "not-rtl",
+    "body": ["@mixin not-rtl {", "\t$0", "}"],
+    "description": "Mantine not-rtl mixin"
+  },
+  "not-ltr mixin": {
+    "scope": "postcss,css",
+    "prefix": "not-ltr",
+    "body": ["@mixin not-ltr {", "\t$0", "}"],
+    "description": "Mantine not-ltr mixin"
+  },
+  "where-light mixin": {
+    "scope": "postcss,css",
+    "prefix": "where-light",
+    "body": ["@mixin where-light {", "\t$0", "}"],
+    "description": "Mantine where-light mixin (less specific)"
+  },
+  "where-dark mixin": {
+    "scope": "postcss,css",
+    "prefix": "where-dark",
+    "body": ["@mixin where-dark {", "\t$0", "}"],
+    "description": "Mantine where-dark mixin (less specific)"
+  },
+  "where-rtl mixin": {
+    "scope": "postcss,css",
+    "prefix": "where-rtl",
+    "body": ["@mixin where-rtl {", "\t$0", "}"],
+    "description": "Mantine where-rtl mixin (less specific)"
+  },
+  "where-hover mixin": {
+    "scope": "postcss,css",
+    "prefix": "where-hover",
+    "body": ["@mixin where-hover {", "\t$0", "}"],
+    "description": "Mantine where-hover mixin (less specific)"
+  }
+}
