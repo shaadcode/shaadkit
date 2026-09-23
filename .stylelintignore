@@ -47,7 +47,5 @@ playwright-report/
 playwright/.cache/
 
 
-__dev__/*
 
-
-public/storybook
+storybook-static

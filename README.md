@@ -161,6 +161,6 @@ This project is released under the **MIT** License.
 
 ## ✒ Author
 
-Built and maintained by [**Seyed Mojtaba Shadab(ShaadCode)**]([https://shaadcoe.ir/](https://shaadcode.ir/)).
+Built and maintained by [Seyed Mojtaba Shadab(ShaadCode)]([https://shaadcoe.ir/](https://shaadcode.ir/)).
 
 If you find ShaadKit useful, consider giving the repository a ⭐
