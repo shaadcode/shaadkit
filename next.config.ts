@@ -16,7 +16,6 @@ const baseConfig: NextConfig = {
   },
   experimental: {
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
-    turbopackRustReactCompiler: true,
   },
 }
 

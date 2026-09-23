@@ -23,7 +23,7 @@
     "test:base": "vitest run --config ./vitest.config.ts",
     "test:storybook": "npm run test:base --project=storybook",
     "test:storybook-watch": "npm run test:sb -- -w",
-    "analyze": "ANALYZE=true next build",
+    "analyze": "ANALYZE=true next build --webpack",
     "lint": "npm run eslint:base && npm run stylelint",
     "lint:fix": "npm run eslint:base -- --fix && npm run stylelint -- --fix",
     "eslint:base": "eslint . --cache --cache-location .cache/eslint/ --no-warn-ignored",
