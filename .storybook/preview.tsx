@@ -1,18 +1,22 @@
-import '@mantine/core/styles.css';
+import type { Decorator } from '@storybook/nextjs-vite'
 
+import { DirectionProvider, MantineProvider } from '@mantine/core'
+import { NextIntlClientProvider } from 'next-intl'
+import { themeFactory } from '@/shared/config/mantine/theme'
+import messages from '@/shared/config/nextIntl/messages'
+import { routing } from '@/shared/config/nextIntl/routing'
+import { getDir } from '@/shared/lib/nextIntlExtended'
 
-import { themeFactory } from '@/shared/config/mantine/theme';
-import { ColorSchemeScript, MantineProvider } from '@mantine/core';
+import '@mantine/core/styles.css'
+import './../app/[locale]/globals.css'
 
 const theme = themeFactory()
-
-export const parameters = {
-};
+const getStorybookLocale = (ctx: any) => ctx.globals.locale as (typeof routing.defaultLocale) || routing.defaultLocale
 
 export const globalTypes = {
   theme: {
     name: 'Theme',
-    description: 'Mantine color scheme',
+    description: 'color scheme',
     defaultValue: 'light',
     toolbar: {
       icon: 'mirror',
@@ -22,15 +26,39 @@ export const globalTypes = {
       ],
     },
   },
-};
+  locale: {
+    toolbar: {
+      icon: 'globe',
+      items: [
+        {
+          value: 'en',
+          title: 'English',
+        },
+      ],
+    },
+  },
+}
 
 export const decorators = [
-  (Story: any, context: any) => {
-    const scheme = (context.globals.theme || 'light') as 'light' | 'dark';
+  (Story, context) => {
+    const locale = getStorybookLocale(context)
+    const direction = getDir(locale)
+    const localeMessages = messages[locale]
+    const scheme = (context.globals['theme'] || 'light') as 'light' | 'dark'
+    const isDisableForceColorScheme = context.parameters['disableForceColorScheme'] as boolean
     return (
-      <MantineProvider theme={theme} forceColorScheme={scheme}>
-        <ColorSchemeScript />
-        <Story/>
-      </MantineProvider>
-    );
-  },]
+      <NextIntlClientProvider locale={locale} messages={localeMessages}>
+        <DirectionProvider detectDirection={false} initialDirection={direction}>
+          <MantineProvider
+            deduplicateInlineStyles
+            classNamesPrefix="shaadkit"
+            theme={theme}
+            forceColorScheme={isDisableForceColorScheme ? undefined : scheme}
+          >
+            <Story />
+          </MantineProvider>
+        </DirectionProvider>
+      </NextIntlClientProvider>
+    )
+  },
+] as Array<Decorator>

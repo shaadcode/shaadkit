@@ -1,7 +1,7 @@
 import type { Direction } from '@mantine/core'
 
 import type { ReactNode } from 'react'
-import { ColorSchemeScript, DirectionProvider, MantineProvider } from '@mantine/core'
+import { DirectionProvider, MantineProvider } from '@mantine/core'
 import { NextIntlClientProvider } from 'next-intl'
 import { themeFactory } from '@/shared/config/mantine/theme'
 import '@mantine/core/styles.css'
@@ -21,7 +21,6 @@ function ServerProviders({ children, ...props }: Props) {
           theme={theme}
           deduplicateInlineStyles
         >
-          <ColorSchemeScript />
           {children}
         </MantineProvider>
       </DirectionProvider>
