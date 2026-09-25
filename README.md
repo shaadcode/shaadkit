@@ -56,6 +56,8 @@ Ordinary boilerplates are just a simple starting point. **ShaadKit** is a comp
 
 - 🌍 **next-intl** — internationalization (i18n) ready from the start
 
+- 🔄 TanStack Query — powerful async state management & data fetching
+
 - 📖 **Storybook 10** — component-driven development with MCP & A11y
 
 - 🧪 **Vitest + Playwright** — fast and reliable testing
@@ -77,6 +79,7 @@ Ordinary boilerplates are just a simple starting point. **ShaadKit** is a comp
 | UI                    | Mantine               |
 | Styling               | PostCSS / CSS Modules |
 | Internationalization  | next-intl             |
+| Data Fetching	| TanStack Query |
 | Component Development | Storybook             |
 | Testing               | Vitest + Playwright   |
 | Code Quality          | ESLint + Stylelint    |
