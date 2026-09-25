@@ -18,7 +18,7 @@
     "build": "next build",
     "start": "next start",
     "lint:base": "eslint",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "npm run typegen && tsc --noEmit",
     "build:safe": "npm run typecheck && npm run lint:fix && npm run test:base && npm run build ",
     "stylelint": "stylelint \"**/*.css\" --cache --cache-location ./.cache -c ./stylelint.config.mjs",
     "test:base": "vitest run --config ./vitest.config.ts",
