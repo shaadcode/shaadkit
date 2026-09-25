@@ -13,5 +13,8 @@ jobs:
       - name: install dependencies
         run: bun i --frozen-lockfile
 
+      - name: install playwright
+        run: bunx playwright install chromium
+
       - name: build project
         run: bun run build:safe
