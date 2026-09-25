@@ -66,6 +66,8 @@ Ordinary boilerplates are just a simple starting point. **ShaadKit** is a comp
 
 - ⚛️ **React 19 + React Compiler** — the latest React with auto-optimization
 
+- ✅ **Arktype & Arkenv** — blazing-fast type-safe validation at runtime & build-time
+
 ## 🛠️ Tech Stack
 
 | Category              | Technology            |
@@ -82,6 +84,7 @@ Ordinary boilerplates are just a simple starting point. **ShaadKit** is a comp
 | Build Tooling         | Next.js / Vite        |
 | Performance           | Bundle Analyzer       |
 | React Optimization    | React Compiler        |
+| validation    | Arktype        |
 
 ## 🧠What is the philosophy of this stack?
 
