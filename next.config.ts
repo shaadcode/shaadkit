@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next'
+import { withArkEnv } from '@arkenv/nextjs/config'
 import bundleAnalyzer from '@next/bundle-analyzer'
 import createNextIntlPlugin from 'next-intl/plugin'
 
@@ -23,4 +24,4 @@ const withNextIntl = createNextIntlPlugin(({
   requestConfig: './src/shared/config/nextIntl/request.ts',
 }))
 
-export default withBundleAnalyzer(withNextIntl(baseConfig))
+export default withArkEnv(withBundleAnalyzer(withNextIntl(baseConfig)))

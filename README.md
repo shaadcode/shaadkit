@@ -11,7 +11,7 @@
 Shaadkit</h1>
 
 <p align="center">
-  My production-ready Next.js foundation for modern web applications.
+  My production-oriented Next.js foundation for modern web applications.
 </p>
 
 ShaadKit is my personal, opinionated foundation for starting new Next.js projects.
@@ -99,7 +99,7 @@ In my opinion, ShaadKit can be used both for an MVP and for a scalable website. 
 
 ### Prerequisites
 
-Before starting, make sure you have installed at least Node version 24 and the latest version of Bun!
+Before starting, make sure you have installed at least **Node version 24** and **the latest version of Bun**!
 
 ```bash
 # Clone the project
@@ -117,7 +117,7 @@ Then open your browser at: [http://localhost:3000](http://localhost:3000/)
 
 ## 🎯 Key Features
 
-- ✅ **Production-Ready** — optimized settings from the start
+- ✅ **Production-Oriented** — optimized settings from the start
 
 - ✅ **Component-Driven** — integrated Storybook for design & documentation
 

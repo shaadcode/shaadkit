@@ -14,8 +14,12 @@
     "paths": {
       "@/*": [
         "./src/*"
+      ],
+      "@/.arkenv": [
+        "./.arkenv/index.ts"
       ]
     },
+
     "resolveJsonModule": true,
     "allowArbitraryExtensions": true,
     "allowImportingTsExtensions": true,

@@ -19,6 +19,7 @@
     "start": "next start",
     "lint:base": "eslint",
     "typecheck": "tsc --noEmit",
+    "build:safe": "npm run typecheck && npm run lint:fix && npm run test:base && npm run build ",
     "stylelint": "stylelint \"**/*.css\" --cache --cache-location ./.cache -c ./stylelint.config.mjs",
     "test:base": "vitest run --config ./vitest.config.ts",
     "test:storybook": "npm run test:base --project=storybook",
@@ -38,8 +39,11 @@
     }
   ],
   "dependencies": {
+    "@arkenv/core": "^1.0.0-rc.2",
+    "@arkenv/nextjs": "^1.0.0-rc.2",
     "@mantine/core": "^9.6.1",
     "@mantine/hooks": "^9.6.1",
+    "arktype": "^2.2.5",
     "next": "16.3.5",
     "next-intl": "^4.14.4",
     "react": "19.2.8",
