@@ -1,0 +1,17 @@
+on:
+  push:
+    branches: [main]
+
+name: build
+jobs:
+  build-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+
+      - name: install dependencies
+        run: bun i --frozen-lockfile
+
+      - name: build project
+        run: bun run build:safe
