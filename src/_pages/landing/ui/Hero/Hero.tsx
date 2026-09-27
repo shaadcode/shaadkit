@@ -1,8 +1,8 @@
-'use client'
-import { Anchor, Button, Code, Group, SegmentedControl, Stack, Text, Title, useMantineColorScheme } from '@mantine/core'
+'use client';
+import { Anchor, Button, Code, Group, SegmentedControl, Stack, Text, Title, useMantineColorScheme } from '@mantine/core';
 
 function Hero() {
-  const { setColorScheme, colorScheme } = useMantineColorScheme()
+  const { setColorScheme, colorScheme } = useMantineColorScheme();
   return (
     <Stack px="sm" h="100%" justify="center" align="center">
       <Stack style={{ flexDirection: 'column' }} component="main">
@@ -53,7 +53,7 @@ function Hero() {
         />
       </Stack>
     </Stack>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

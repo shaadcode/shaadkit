@@ -1,14 +1,14 @@
-'use client'
-import { Avatar, Badge, Button, Card, Divider, FileButton, Group, Paper, PasswordInput, SimpleGrid, Stack, Tabs, Text, Textarea, TextInput, Title } from '@mantine/core'
-import { useForm } from '@mantine/form'
-import { IconDeviceFloppy, IconLock, IconMail, IconPhone, IconSchool, IconTrash, IconUpload, IconUser } from '@tabler/icons-react'
-import { useTranslations } from 'next-intl'
-import { useState } from 'react'
+'use client';
+import { Avatar, Badge, Button, Card, Divider, FileButton, Group, Paper, PasswordInput, SimpleGrid, Stack, Tabs, Text, Textarea, TextInput, Title } from '@mantine/core';
+import { useForm } from '@mantine/form';
+import { IconDeviceFloppy, IconLock, IconMail, IconPhone, IconSchool, IconTrash, IconUpload, IconUser } from '@tabler/icons-react';
+import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 export default function ProfilePage() {
-  const t = useTranslations('profile')
-  const tCommon = useTranslations('common')
-  const [avatar, setAvatar] = useState<string | null>(null)
+  const t = useTranslations('profile');
+  const tCommon = useTranslations('common');
+  const [avatar, setAvatar] = useState<string | null>(null);
 
   const profileForm = useForm({
     initialValues: {
@@ -18,7 +18,7 @@ export default function ProfilePage() {
       school: 'ShaadKit Academy',
       bio: '',
     },
-  })
+  });
 
   const passwordForm = useForm({
     initialValues: {
@@ -26,17 +26,17 @@ export default function ProfilePage() {
       newPassword: '',
       confirmPassword: '',
     },
-  })
+  });
 
   const handleProfileSubmit = (values: typeof profileForm.values) => {
     // eslint-disable-next-line no-console
-    console.log('profile', values)
-  }
+    console.log('profile', values);
+  };
 
   const handlePasswordSubmit = (values: typeof passwordForm.values) => {
     // eslint-disable-next-line no-console
-    console.log('password', values)
-  }
+    console.log('password', values);
+  };
 
   return (
     <Stack gap="lg">
@@ -70,7 +70,7 @@ export default function ProfilePage() {
             <FileButton
               onChange={(file) => {
                 if (file)
-                  setAvatar(URL.createObjectURL(file))
+                  setAvatar(URL.createObjectURL(file));
               }}
               accept="image/png,image/jpeg"
             >
@@ -185,5 +185,5 @@ export default function ProfilePage() {
         </Tabs.Panel>
       </Tabs>
     </Stack>
-  )
+  );
 }

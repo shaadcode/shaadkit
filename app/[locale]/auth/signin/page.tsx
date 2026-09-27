@@ -1,3 +1,3 @@
-import SigninPage from '@/_pages/Auth/Signin/Signin'
+import SigninPage from '@/_pages/Auth/Signin/Signin';
 
-export default SigninPage
+export default SigninPage;

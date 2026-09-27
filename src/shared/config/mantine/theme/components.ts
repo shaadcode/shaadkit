@@ -1,8 +1,8 @@
-'use client'
-import type { createTheme } from '@mantine/core'
-import { Anchor, Image as MantineImage, NavLink } from '@mantine/core'
-import Image from 'next/image'
-import { ClientLink } from '@/shared/lib/nextExtended'
+'use client';
+import type { createTheme } from '@mantine/core';
+import { Anchor, Image as MantineImage, NavLink } from '@mantine/core';
+import Image from 'next/image';
+import { ClientLink } from '@/shared/lib/nextExtended';
 
 export const components = {
   Anchor: Anchor.extend({ defaultProps: { component: ClientLink } }),
@@ -16,4 +16,4 @@ export const components = {
       height: 100,
     },
   }),
-} as const satisfies Parameters<typeof createTheme>[0]['components']
+} as const satisfies Parameters<typeof createTheme>[0]['components'];

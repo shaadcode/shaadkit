@@ -1,16 +1,16 @@
-import { Card, Group, SimpleGrid, Stack, Text, ThemeIcon, Title } from '@mantine/core'
-import { IconBook, IconCalendar, IconChartBar, IconClipboardList } from '@tabler/icons-react'
-import { useTranslations } from 'next-intl'
+import { Card, Group, SimpleGrid, Stack, Text, ThemeIcon, Title } from '@mantine/core';
+import { IconBook, IconCalendar, IconChartBar, IconClipboardList } from '@tabler/icons-react';
+import { useTranslations } from 'next-intl';
 
 export default function OverviewDashboardPage() {
-  const t = useTranslations('dashboard')
+  const t = useTranslations('dashboard');
 
   const stats = [
     { label: t('stats.classes'), value: '5', icon: IconBook, color: 'blue' },
     { label: t('stats.assignments'), value: '12', icon: IconClipboardList, color: 'orange' },
     { label: t('stats.calendar'), value: '3', icon: IconCalendar, color: 'green' },
     { label: t('stats.reports'), value: '8', icon: IconChartBar, color: 'violet' },
-  ]
+  ];
   return (
     <Stack gap="lg">
       <div>
@@ -40,5 +40,5 @@ export default function OverviewDashboardPage() {
         ))}
       </SimpleGrid>
     </Stack>
-  )
+  );
 }

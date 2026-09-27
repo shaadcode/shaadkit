@@ -1,5 +1,5 @@
-import getDir from '@/shared/lib/nextIntlExtended/getDir'
+import getDir from '@/shared/lib/nextIntlExtended/getDir';
 
 export {
   getDir,
-}
+};

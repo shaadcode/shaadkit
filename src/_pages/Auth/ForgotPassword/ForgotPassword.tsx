@@ -1,26 +1,26 @@
-'use client'
-import { Anchor, Button, Paper, Stack, Text, TextInput, Title } from '@mantine/core'
-import { useForm } from '@mantine/form'
-import { useTranslations } from 'next-intl'
-import { useState } from 'react'
-import { ClientLink } from '@/shared/lib/nextExtended'
+'use client';
+import { Anchor, Button, Paper, Stack, Text, TextInput, Title } from '@mantine/core';
+import { useForm } from '@mantine/form';
+import { useTranslations } from 'next-intl';
+import { useState } from 'react';
+import { ClientLink } from '@/shared/lib/nextExtended';
 
 export default function ForgotPasswordPage() {
-  const t = useTranslations('auth.forgotPassword')
-  const tCommon = useTranslations('common')
-  const [submitted, setSubmitted] = useState(false)
+  const t = useTranslations('auth.forgotPassword');
+  const tCommon = useTranslations('common');
+  const [submitted, setSubmitted] = useState(false);
 
   const form = useForm({
     initialValues: {
       email: '',
     },
-  })
+  });
 
   const handleSubmit = (values: typeof form.values) => {
     // eslint-disable-next-line no-console
-    console.log(values)
-    setSubmitted(true)
-  }
+    console.log(values);
+    setSubmitted(true);
+  };
 
   return (
     <Stack px="md" mih="100dvh" justify="center" align="center">
@@ -86,5 +86,5 @@ export default function ForgotPasswordPage() {
         </Text>
       </Paper>
     </Stack>
-  )
+  );
 }

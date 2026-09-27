@@ -1,12 +1,12 @@
-'use client'
-import { Anchor, Button, Checkbox, Divider, Paper, PasswordInput, Stack, Text, TextInput, Title } from '@mantine/core'
-import { useForm } from '@mantine/form'
-import { useTranslations } from 'next-intl'
-import { ClientLink } from '@/shared/lib/nextExtended'
+'use client';
+import { Anchor, Button, Checkbox, Divider, Paper, PasswordInput, Stack, Text, TextInput, Title } from '@mantine/core';
+import { useForm } from '@mantine/form';
+import { useTranslations } from 'next-intl';
+import { ClientLink } from '@/shared/lib/nextExtended';
 
 export default function SignupPage() {
-  const t = useTranslations('auth.signup')
-  const tCommon = useTranslations('common')
+  const t = useTranslations('auth.signup');
+  const tCommon = useTranslations('common');
 
   const form = useForm({
     initialValues: {
@@ -16,12 +16,12 @@ export default function SignupPage() {
       confirmPassword: '',
       acceptTerms: false,
     },
-  })
+  });
 
   const handleSubmit = (values: typeof form.values) => {
     // eslint-disable-next-line no-console
-    console.log(values)
-  }
+    console.log(values);
+  };
 
   return (
     <Stack px="md" mih="100dvh" justify="center" align="center">
@@ -110,5 +110,5 @@ export default function SignupPage() {
         </Text>
       </Paper>
     </Stack>
-  )
+  );
 }

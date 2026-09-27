@@ -1,4 +1,4 @@
-import arkenv from '@/.arkenv'
+import arkenv from '@/.arkenv';
 /**
  * Environment variable schema.
  * In Next.js, import the generated `arkenv` from `@/.arkenv` to validate variables.
@@ -6,4 +6,4 @@ import arkenv from '@/.arkenv'
  */
 export const env = arkenv({
   ANALYZE: 'boolean?',
-})
+});

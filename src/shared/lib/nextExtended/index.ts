@@ -1,5 +1,5 @@
-import ClientLink from './ClientLink'
+import ClientLink from './ClientLink';
 
 export {
   ClientLink,
-}
+};

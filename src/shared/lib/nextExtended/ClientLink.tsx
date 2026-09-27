@@ -1,10 +1,10 @@
-'use client'
+'use client';
 
-import type { ComponentProps } from 'react'
-import { Anchor } from '@mantine/core'
-import { Link } from '@/shared/config/nextIntl/navigation'
+import type { ComponentProps } from 'react';
+import { Anchor } from '@mantine/core';
+import { Link } from '@/shared/config/nextIntl/navigation';
 
-type Props = ComponentProps<typeof Anchor<'a'>> & ComponentProps<typeof Link>
+type Props = ComponentProps<typeof Anchor<'a'>> & ComponentProps<typeof Link>;
 
 function ClientLink({ children, ...props }: Props) {
   return (
@@ -14,7 +14,7 @@ function ClientLink({ children, ...props }: Props) {
     >
       {children}
     </Anchor>
-  )
+  );
 }
 
-export default ClientLink
+export default ClientLink;

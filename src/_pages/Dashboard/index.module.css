@@ -1,5 +1,5 @@
 .nav-item-label {
   @mixin light {
-    color: var(--mantine-color-dark-6)
+    color: var(--mantine-color-dark-6);
   }
 }

@@ -1,3 +1,3 @@
-import ForgotPasswordPage from '@/_pages/Auth/ForgotPassword/ForgotPassword'
+import ForgotPasswordPage from '@/_pages/Auth/ForgotPassword/ForgotPassword';
 
-export default ForgotPasswordPage
+export default ForgotPasswordPage;

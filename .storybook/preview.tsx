@@ -1,17 +1,17 @@
-import type { Decorator } from '@storybook/nextjs-vite'
+import type { Decorator } from '@storybook/nextjs-vite';
 
-import { DirectionProvider, MantineProvider } from '@mantine/core'
-import { NextIntlClientProvider } from 'next-intl'
-import { themeFactory } from '@/shared/config/mantine/theme'
-import messages from '@/shared/config/nextIntl/messages'
-import { routing } from '@/shared/config/nextIntl/routing'
-import { getDir } from '@/shared/lib/nextIntlExtended'
+import { DirectionProvider, MantineProvider } from '@mantine/core';
+import { NextIntlClientProvider } from 'next-intl';
+import { themeFactory } from '@/shared/config/mantine/theme';
+import messages from '@/shared/config/nextIntl/messages';
+import { routing } from '@/shared/config/nextIntl/routing';
+import { getDir } from '@/shared/lib/nextIntlExtended';
 
-import '@mantine/core/styles.css'
-import './../app/[locale]/globals.css'
+import '@mantine/core/styles.css';
+import './../app/[locale]/globals.css';
 
-const theme = themeFactory()
-const getStorybookLocale = (ctx: any) => ctx.globals.locale as (typeof routing.defaultLocale) || routing.defaultLocale
+const theme = themeFactory();
+const getStorybookLocale = (ctx: any) => ctx.globals.locale as (typeof routing.defaultLocale) || routing.defaultLocale;
 
 export const globalTypes = {
   theme: {
@@ -37,15 +37,15 @@ export const globalTypes = {
       ],
     },
   },
-}
+};
 
 export const decorators = [
   (Story, context) => {
-    const locale = getStorybookLocale(context)
-    const direction = getDir(locale)
-    const localeMessages = messages[locale]
-    const scheme = (context.globals['theme'] || 'light') as 'light' | 'dark'
-    const isDisableForceColorScheme = context.parameters['disableForceColorScheme'] as boolean
+    const locale = getStorybookLocale(context);
+    const direction = getDir(locale);
+    const localeMessages = messages[locale];
+    const scheme = (context.globals['theme'] || 'light') as 'light' | 'dark';
+    const isDisableForceColorScheme = context.parameters['disableForceColorScheme'] as boolean;
     return (
       <NextIntlClientProvider locale={locale} messages={localeMessages}>
         <DirectionProvider detectDirection={false} initialDirection={direction}>
@@ -59,6 +59,6 @@ export const decorators = [
           </MantineProvider>
         </DirectionProvider>
       </NextIntlClientProvider>
-    )
+    );
   },
-] as Array<Decorator>
+] as Array<Decorator>;
