@@ -17,4 +17,4 @@ jobs:
         run: bunx playwright install chromium
 
       - name: build project
-        run: bun run build:safe
+        run: bun run build:safe-ci
