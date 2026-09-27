@@ -1,5 +1,16 @@
 {
-  "HomePage": {
-    "title": "Hello world!"
-  }
+  "or": "OR",
+  "continue": "Continue",
+  "back": "Back",
+  "submit": "Submit",
+  "email": "Email",
+  "emailPlaceholder": "example@org.com",
+  "password": "Password",
+  "fullName": "Full name",
+  "save": "Save changes",
+  "confirmPassword": "Confirm password",
+  "terms": "Terms of Service",
+  "rememberMe": "remember me",
+  "privacy": "Privacy Policy",
+  "termsNotice": "By continuing, you agree to our <terms>Terms of Service</terms> and <privacy>Privacy Policy</privacy>."
 }
