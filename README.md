@@ -54,15 +54,21 @@ Ordinary boilerplates are just a simple starting point. **ShaadKit** is a comp
 
 - 🧩 **Mantine v9** — powerful and accessible components
 
-- 🌍 **next-intl** — internationalization (i18n) ready from the start
+- 🧩 **Mantine Hooks** — 70+ production-ready hooks for state, UI, and browser APIs
 
-- 🔄 TanStack Query — powerful async state management & data fetching
+- 📝 **Mantine Form** — simple, performant, and fully typed form management
+
+- 🌍 **Next-intl** — internationalization (i18n) ready from the start
+
+- 🔄 **TanStack Query** — powerful async state management & data fetching
 
 - 📖 **Storybook 10** — component-driven development with MCP & A11y
 
 - 🧪 **Vitest + Playwright** — fast and reliable testing
 
 - 🎨 **Stylelint + ESLint (Antfu Config)** — top-tier code quality
+
+- 🎯 **Tabler Icons** — 5000+ consistent, tree-shakable icons, fully integrated with Mantine
 
 - 🔍 **Bundle Analyzer** — analyze and optimize your bundle
 
@@ -83,6 +89,9 @@ Ordinary boilerplates are just a simple starting point. **ShaadKit** is a comp
 | Component Development | Storybook             |
 | Testing               | Vitest + Playwright   |
 | Code Quality          | ESLint + Stylelint    |
+| UI Hooks          | Mantine Hooks    |
+| Form Management          | Mantine Form    |
+| Icons          | Tabler Icons    |
 | Package Manager       | Bun                   |
 | Build Tooling         | Next.js / Vite        |
 | Performance           | Bundle Analyzer       |
@@ -139,6 +148,7 @@ Then open your browser at: [http://localhost:3000](http://localhost:3000/)
 
 - ✅ **Integrated technologies** — The `Image` and `Anchor` components have been integrated with Next.js and Next-intl.
 
+- ✅ **Type-Safe Environment** — runtime environment validation with Arkenv
 
 
 ## 🗺 Roadmap
