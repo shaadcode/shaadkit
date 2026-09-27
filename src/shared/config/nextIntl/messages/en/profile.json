@@ -1,0 +1,26 @@
+{
+  "title": "Profile",
+  "description": "Manage your personal information and account security.",
+  "tabs": {
+    "general": "General",
+    "security": "Security"
+  },
+  "role": {
+    "student": "Student",
+    "teacher": "Teacher",
+    "parent": "Parent"
+  },
+  "fields": {
+    "phone": "Phone number",
+    "school": "School",
+    "bio": "Bio",
+    "bioPlaceholder": "Tell us a little about yourself...",
+    "currentPassword": "Current password",
+    "newPassword": "New password"
+  },
+  "actions": {
+    "upload": "Upload",
+    "remove": "Remove",
+    "updatePassword": "Update password"
+  }
+}

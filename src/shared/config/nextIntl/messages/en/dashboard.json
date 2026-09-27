@@ -1,0 +1,25 @@
+{
+  "title": "Dashboard",
+  "description": "Here's an overview of your learning activity.",
+  "nav": {
+    "overview": "Overview",
+    "classes": "Classes",
+    "assignments": "Assignments",
+    "calendar": "Calendar",
+    "reports": "Reports",
+    "settings": "Settings"
+  },
+  "stats": {
+    "classes": "Classes",
+    "assignments": "Assignments",
+    "calendar": "Upcoming",
+    "reports": "Reports"
+  },
+  "user": {
+    "name": "Seyed Mojtaba",
+    "account": "Account",
+    "profile": "Profile",
+    "notifications": "Notifications",
+    "logout": "Logout"
+  }
+}

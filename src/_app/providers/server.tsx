@@ -20,6 +20,7 @@ function ServerProviders({ children, ...props }: Props) {
           classNamesPrefix="shaadkit"
           theme={theme}
           deduplicateInlineStyles
+          defaultColorScheme="light"
         >
           {children}
         </MantineProvider>
