@@ -41,54 +41,43 @@ finally start building
 you can start from:
 
 ```
-    ShaadKit
-        ↓
+    ShaadKit
+        ↓
 build the product
 ```
 
 ## ✨ Why ShaadKit?
 
-Ordinary boilerplates are just a simple starting point. **ShaadKit** is a complete, opinionated foundation that solves every concern of a professional project from day one:
+Ordinary boilerplates are just a simple starting point. **ShaadKit** is a complete, opinionated foundation that solves every concern of a professional project from day one:
 
-- ⚡ **Bun** as Package Manager — blazing-fast install & run
-
-- 🧩 **Mantine v9** — powerful and accessible components
-
-- 🧩 **Mantine Hooks** — 70+ production-ready hooks for state, UI, and browser APIs
-
+- ⚡ **Bun** as Package Manager — blazing-fast install & run
+- 🧩 **Mantine v9** — powerful and accessible components
+- 🧩 **Mantine Hooks** — 70+ production-ready hooks for state, UI, and browser APIs
 - 📝 **Mantine Form** — simple, performant, and fully typed form management
-
-- 🌍 **Next-intl** — internationalization (i18n) ready from the start
-
+- 🌍 **Next-intl** — internationalization (i18n) ready from the start
 - 🔄 **TanStack Query** — powerful async state management & data fetching
-
-- 📖 **Storybook 10** — component-driven development with MCP & A11y
-
-- 🧪 **Vitest + Playwright** — fast and reliable testing
-
-- 🎨 **Stylelint + ESLint (Antfu Config)** — top-tier code quality
-
+- 📖 **Storybook 10** — component-driven development with MCP & A11y
+- 🧪 **Vitest + Playwright** — fast and reliable testing
+- 🎨 **Oxlint + Oxfmt** — blazing-fast linting & formatting, replacing ESLint and Stylelint
 - 🎯 **Tabler Icons** — 5000+ consistent, tree-shakable icons, fully integrated with Mantine
-
-- 🔍 **Bundle Analyzer** — analyze and optimize your bundle
-
-- ⚛️ **React 19 + React Compiler** — the latest React with auto-optimization
-
-- ✅ **Arktype & Arkenv** — blazing-fast type-safe validation at runtime & build-time
+- 🔍 **Bundle Analyzer** — analyze and optimize your bundle
+- ⚛️ **React 19 + React Compiler** — the latest React with auto-optimization
+- ✅ **Arktype & Arkenv** — blazing-fast type-safe validation at runtime & build-time
+- 🟦 **TypeScript 7** — the next generation of TypeScript, with native performance
 
 ## 🛠️ Tech Stack
 
 | Category              | Technology            |
 | --------------------- | --------------------- |
 | Framework             | Next.js(React)        |
-| Language              | TypeScript            |
+| Language              | TypeScript 7          |
 | UI                    | Mantine               |
 | Styling               | PostCSS / CSS Modules |
 | Internationalization  | next-intl             |
 | Data Fetching         | TanStack Query        |
 | Component Development | Storybook             |
 | Testing               | Vitest + Playwright   |
-| Code Quality          | ESLint + Stylelint    |
+| Code Quality          | Oxlint + Oxfmt        |
 | UI Hooks              | Mantine Hooks         |
 | Form Management       | Mantine Form          |
 | Icons                 | Tabler Icons          |
@@ -126,26 +115,18 @@ bun install
 bun dev
 ```
 
-Then open your browser at: [http://localhost:3000](http://localhost:3000/)
+Then open your browser at: [http://localhost:3000](http://localhost:3000/)
 
 ## 🎯 Key Features
 
-- ✅ **Production-Oriented** — optimized settings from the start
-
-- ✅ **Component-Driven** — integrated Storybook for design & documentation
-
-- ✅ **Testable** — Vitest + Playwright in a real browser
-
-- ✅ **Accessible (A11y)** — Storybook A11y addon included
-
-- ✅ **Multilingual** — full i18n support
-
-- ✅ **Code Quality** — automatic lint & format with best-in-class configs
-
-- ✅ **Bundle Optimization** — analyze and reduce output size
-
-- ✅ **Integrated technologies** — The `Image` and `Anchor` components have been integrated with Next.js and Next-intl.
-
+- ✅ **Production-Oriented** — optimized settings from the start
+- ✅ **Component-Driven** — integrated Storybook for design & documentation
+- ✅ **Testable** — Vitest + Playwright in a real browser
+- ✅ **Accessible (A11y)** — Storybook A11y addon included
+- ✅ **Multilingual** — full i18n support
+- ✅ **Code Quality** — automatic lint & format with **Oxlint + Oxfmt** for blazing-fast performance
+- ✅ **Bundle Optimization** — analyze and reduce output size
+- ✅ **Integrated technologies** — The `Image` and `Anchor` components have been integrated with Next.js and Next-intl.
 - ✅ **Type-Safe Environment** — runtime environment validation with Arkenv
 
 ## 🗺 Roadmap
@@ -159,18 +140,14 @@ The focus is on maintaining a small, reliable, and opinionated foundation rather
 We welcome contributions! Before submitting a PR, please:
 
 1. Fork the project
-
 2. Create a new branch (`git checkout -b feature/amazing-feature`)
-
 3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
-
 4. Push to the branch (`git push origin feature/amazing-feature`)
-
 5. Open a Pull Request
 
 ## 📄 License
 
-This project is released under the **MIT** License.
+This project is released under the **MIT** License.
 
 ## ✒ Author
 
