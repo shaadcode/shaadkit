@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import type { ComponentProps } from 'react';
-import { ActionIcon, Tooltip, useMantineColorScheme } from '@mantine/core';
-import { IconMoon, IconSun } from '@tabler/icons-react';
+import { ActionIcon, Tooltip, useMantineColorScheme } from "@mantine/core";
+import { IconMoon, IconSun } from "@tabler/icons-react";
+import type { ComponentProps } from "react";
 
 interface Props {
-  button?: ComponentProps<typeof ActionIcon<'div'>>;
+  button?: ComponentProps<typeof ActionIcon<"div">>;
 }
-function ThemeToggle(props: Props) {
+const ThemeToggle = (props: Props) => {
   const { toggleColorScheme, colorScheme } = useMantineColorScheme();
-  const colorSchemeWithoutAuto = colorScheme === 'auto' ? 'light' : 'dark';
+  const colorSchemeWithoutAuto = colorScheme === "auto" ? "light" : "dark";
   return (
     <Tooltip
-      label={colorSchemeWithoutAuto === 'dark' ? 'Light mode' : 'Dark mode'}
+      label={colorSchemeWithoutAuto === "dark" ? "Light mode" : "Dark mode"}
       withArrow
     >
       <ActionIcon
@@ -23,12 +23,14 @@ function ThemeToggle(props: Props) {
         aria-label="Toggle color scheme"
         {...props.button}
       >
-        {colorSchemeWithoutAuto === 'dark'
-          ? (<IconSun size={18} />)
-          : (<IconMoon size={18} />)}
+        {colorSchemeWithoutAuto === "dark" ? (
+          <IconSun size={18} />
+        ) : (
+          <IconMoon size={18} />
+        )}
       </ActionIcon>
     </Tooltip>
   );
-}
+};
 
 export default ThemeToggle;

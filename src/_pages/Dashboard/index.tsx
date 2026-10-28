@@ -1,32 +1,66 @@
-'use client';
-import { AppShell, Avatar, Burger, Group, Menu, NavLink, Stack, Text, Title, UnstyledButton } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import { IconBell, IconBook, IconCalendar, IconChartBar, IconClipboardList, IconHome, IconLogout, IconSettings, IconUser } from '@tabler/icons-react';
-import { useLocale, useTranslations } from 'next-intl';
-import { useLayoutEffect } from 'react';
+"use client";
+import {
+    AppShell,
+    Avatar,
+    Burger,
+    Group,
+    Menu,
+    NavLink,
+    Stack,
+    Text,
+    Title,
+    UnstyledButton,
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import {
+    IconBell,
+    IconBook,
+    IconCalendar,
+    IconChartBar,
+    IconClipboardList,
+    IconHome,
+    IconLogout,
+    IconSettings,
+    IconUser,
+} from "@tabler/icons-react";
+import { useLocale, useTranslations } from "next-intl";
+import { useLayoutEffect } from "react";
 
-import { redirect, usePathname } from '@/shared/config/nextIntl/navigation';
-import { ThemeToggle } from '@/shared/lib/mantineExtended';
-import { ClientLink } from '@/shared/lib/nextExtended';
-import classes from './index.module.css';
+import { redirect, usePathname } from "@/shared/config/nextIntl/navigation";
+import { ThemeToggle } from "@/shared/lib/mantineExtended";
 
-export default function DashboardLayout(props: LayoutProps<'/[locale]/dashboard'>) {
+import ClientLink from "@/shared/lib/nextExtended";
+import classes from "./index.module.css";
+
+const DashboardLayout = (props: LayoutProps<"/[locale]/dashboard">) => {
   const [opened, { toggle }] = useDisclosure();
   const pathname = usePathname();
-  const t = useTranslations('dashboard');
+  const t = useTranslations("dashboard");
   const locale = useLocale();
   const navItems = [
-    { label: t('nav.overview'), href: '/dashboard/overview', icon: IconHome },
-    { label: t('nav.classes'), href: '/dashboard/classes', icon: IconBook },
-    { label: t('nav.assignments'), href: '/dashboard/assignments', icon: IconClipboardList },
-    { label: t('nav.calendar'), href: '/dashboard/calendar', icon: IconCalendar },
-    { label: t('nav.reports'), href: '/dashboard/reports', icon: IconChartBar },
-    { label: t('nav.settings'), href: '/dashboard/settings', icon: IconSettings },
+    { label: t("nav.overview"), href: "/dashboard/overview", icon: IconHome },
+    { label: t("nav.classes"), href: "/dashboard/classes", icon: IconBook },
+    {
+      label: t("nav.assignments"),
+      href: "/dashboard/assignments",
+      icon: IconClipboardList,
+    },
+    {
+      label: t("nav.calendar"),
+      href: "/dashboard/calendar",
+      icon: IconCalendar,
+    },
+    { label: t("nav.reports"), href: "/dashboard/reports", icon: IconChartBar },
+    {
+      label: t("nav.settings"),
+      href: "/dashboard/settings",
+      icon: IconSettings,
+    },
   ];
 
   useLayoutEffect(() => {
-    if (pathname === 'dashboard') {
-      redirect({ href: '/dashboard/overview', locale });
+    if (pathname === "dashboard") {
+      redirect({ href: "/dashboard/overview", locale });
     }
   });
 
@@ -35,7 +69,7 @@ export default function DashboardLayout(props: LayoutProps<'/[locale]/dashboard'
       header={{ height: 60 }}
       navbar={{
         width: 260,
-        breakpoint: 'sm',
+        breakpoint: "sm",
         collapsed: { mobile: !opened },
       }}
       padding="md"
@@ -43,7 +77,12 @@ export default function DashboardLayout(props: LayoutProps<'/[locale]/dashboard'
       <AppShell.Header>
         <Group h="100%" px="md" justify="space-between">
           <Group>
-            <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+            <Burger
+              opened={opened}
+              onClick={toggle}
+              hiddenFrom="sm"
+              size="sm"
+            />
             <Title order={4}>ShaadKit</Title>
             <ThemeToggle />
           </Group>
@@ -57,23 +96,23 @@ export default function DashboardLayout(props: LayoutProps<'/[locale]/dashboard'
                       SK
                     </Avatar>
                     <Text fz="sm" fw={500} visibleFrom="sm">
-                      {t('user.name')}
+                      {t("user.name")}
                     </Text>
                   </Group>
                 </UnstyledButton>
               </Menu.Target>
 
               <Menu.Dropdown>
-                <Menu.Label>{t('user.account')}</Menu.Label>
+                <Menu.Label>{t("user.account")}</Menu.Label>
                 <Menu.Item
                   component={ClientLink}
                   href="/dashboard/profile"
                   leftSection={<IconUser size={14} />}
                 >
-                  {t('user.profile')}
+                  {t("user.profile")}
                 </Menu.Item>
                 <Menu.Item leftSection={<IconBell size={14} />}>
-                  {t('user.notifications')}
+                  {t("user.notifications")}
                 </Menu.Item>
                 <Menu.Divider />
                 <Menu.Item
@@ -82,7 +121,7 @@ export default function DashboardLayout(props: LayoutProps<'/[locale]/dashboard'
                   component={ClientLink}
                   href="/auth/signin"
                 >
-                  {t('user.logout')}
+                  {t("user.logout")}
                 </Menu.Item>
               </Menu.Dropdown>
             </Menu>
@@ -92,12 +131,12 @@ export default function DashboardLayout(props: LayoutProps<'/[locale]/dashboard'
 
       <AppShell.Navbar p="md">
         <Stack gap="xs">
-          {navItems.map(item => (
+          {navItems.map((item) => (
             <NavLink
               key={item.href}
               href={item.href}
               label={item.label}
-              classNames={{ label: classes['nav-item-label'] }}
+              classNames={{ label: classes["nav-item-label"] }}
               variant="default"
               leftSection={<item.icon size={18} />}
             />
@@ -105,10 +144,9 @@ export default function DashboardLayout(props: LayoutProps<'/[locale]/dashboard'
         </Stack>
       </AppShell.Navbar>
 
-      <AppShell.Main>
-        {props.children}
-
-      </AppShell.Main>
+      <AppShell.Main>{props.children}</AppShell.Main>
     </AppShell>
   );
-}
+};
+
+export default DashboardLayout;

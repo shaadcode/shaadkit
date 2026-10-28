@@ -1,5 +1,1 @@
-import ClientLink from './ClientLink';
-
-export {
-  ClientLink,
-};
+export { default } from "./ClientLink";

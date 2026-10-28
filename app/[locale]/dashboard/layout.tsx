@@ -1,3 +1,1 @@
-import DashboardLayout from '@/_pages/Dashboard';
-
-export default DashboardLayout;
+export { default } from "@/_pages/Dashboard";

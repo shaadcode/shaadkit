@@ -1,9 +1,9 @@
-import { createTheme } from '@mantine/core';
-import { components } from './components';
+import { createTheme } from "@mantine/core";
 
-export function themeFactory() {
-  return createTheme({
+import { components } from "./components";
+
+export const themeFactory = () =>
+  createTheme({
     components,
-    primaryColor: 'orange',
+    primaryColor: "orange",
   });
-}

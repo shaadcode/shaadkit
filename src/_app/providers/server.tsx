@@ -1,21 +1,25 @@
-import type { Direction } from '@mantine/core';
+import type { Direction } from "@mantine/core";
+import { DirectionProvider, MantineProvider } from "@mantine/core";
+import { NextIntlClientProvider } from "next-intl";
+import type { ReactNode } from "react";
 
-import type { ReactNode } from 'react';
-import { DirectionProvider, MantineProvider } from '@mantine/core';
-import { NextIntlClientProvider } from 'next-intl';
-import { themeFactory } from '@/shared/config/mantine/theme';
-import '@mantine/core/styles.css';
-import './../../../app/[locale]/globals.css';
+import { themeFactory } from "@/shared/config/mantine/theme";
+
+import "@mantine/core/styles.css";
+import "./../../../app/[locale]/globals.css";
 
 interface Props {
   children: ReactNode;
   direction: Direction;
 }
-function ServerProviders({ children, ...props }: Props) {
+const ServerProviders = ({ children, ...props }: Props) => {
   const theme = themeFactory();
   return (
     <NextIntlClientProvider>
-      <DirectionProvider detectDirection={false} initialDirection={props.direction}>
+      <DirectionProvider
+        detectDirection={false}
+        initialDirection={props.direction}
+      >
         <MantineProvider
           classNamesPrefix="shaadkit"
           theme={theme}
@@ -27,6 +31,6 @@ function ServerProviders({ children, ...props }: Props) {
       </DirectionProvider>
     </NextIntlClientProvider>
   );
-}
+};
 
 export default ServerProviders;

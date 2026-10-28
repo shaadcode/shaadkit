@@ -1,3 +1,1 @@
-import ProfilePage from '@/_pages/Dashboard/Profile/Profile';
-
-export default ProfilePage;
+export { default } from "@/_pages/Dashboard/Profile/Profile";

@@ -85,18 +85,18 @@ Ordinary boilerplates are just a simple starting point. **ShaadKit** is a comp
 | UI                    | Mantine               |
 | Styling               | PostCSS / CSS Modules |
 | Internationalization  | next-intl             |
-| Data Fetching	| TanStack Query |
+| Data Fetching         | TanStack Query        |
 | Component Development | Storybook             |
 | Testing               | Vitest + Playwright   |
 | Code Quality          | ESLint + Stylelint    |
-| UI Hooks          | Mantine Hooks    |
-| Form Management          | Mantine Form    |
-| Icons          | Tabler Icons    |
+| UI Hooks              | Mantine Hooks         |
+| Form Management       | Mantine Form          |
+| Icons                 | Tabler Icons          |
 | Package Manager       | Bun                   |
 | Build Tooling         | Next.js / Vite        |
 | Performance           | Bundle Analyzer       |
 | React Optimization    | React Compiler        |
-| validation    | Arktype        |
+| validation            | Arktype               |
 
 ## 🧠What is the philosophy of this stack?
 
@@ -107,8 +107,6 @@ The core technologies of ShaadKit are light and simple enough, they don't have a
 Some technologies also have secondary benefits, like next-intl. It's not just for internationalization, although that's its main purpose! You can use next-intl to manage the static texts of your site. You no longer need to open different files to change a message in different parts of the site.
 
 In my opinion, ShaadKit can be used both for an MVP and for a scalable website. Even though its main focus is on the frontend, with a few changes it can also be used in a full-stack project.
-
-
 
 ## 📦 Installation & Setup
 
@@ -150,7 +148,6 @@ Then open your browser at: [http://localhost:3000](http://localhost:3000/)
 
 - ✅ **Type-Safe Environment** — runtime environment validation with Arkenv
 
-
 ## 🗺 Roadmap
 
 ShaadKit will evolve as the underlying ecosystem evolves.
@@ -177,6 +174,6 @@ This project is released under the **MIT** License.
 
 ## ✒ Author
 
-Built and maintained by [Seyed Mojtaba Shadab(ShaadCode)]([https://shaadcoe.ir/](https://shaadcode.ir/)).
+Built and maintained by [Seyed Mojtaba Shadab(ShaadCode)](<[https://shaadcoe.ir/](https://shaadcode.ir/)>).
 
 If you find ShaadKit useful, consider giving the repository a ⭐

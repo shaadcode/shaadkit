@@ -2,35 +2,10 @@
   "name": "shaadkit-frontend-boilerplate",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "bun@1.4.2",
   "author": {
-    "email": "shaadcode@gmail.com",
     "name": "seyed mojtaba shadab",
+    "email": "shaadcode@gmail.com",
     "url": "https://shaadcode.ir"
-  },
-  "engines": {
-    "node": ">=24",
-    "bun": ">=1.4"
-  },
-  "scripts": {
-    "dev": "next dev --experimental-https",
-    "typegen": "next typegen",
-    "build": "next build",
-    "start": "next start",
-    "lint:base": "eslint",
-    "typecheck": "npm run typegen && tsc --noEmit",
-    "build:safe": "npm run typecheck && npm run lint:fix && npm run test:base && npm run build:storybook && npm run build ",
-    "build:safe-ci": "npm run typecheck && npm run lint && npm run test:base && npm run build-storybook && npm run build",
-    "stylelint": "stylelint \"**/*.css\" --cache --cache-location ./.cache -c ./stylelint.config.mjs",
-    "test:base": "vitest run --config ./vitest.config.ts",
-    "test:storybook": "npm run test:base --project=storybook",
-    "test:storybook-watch": "npm run test:sb -- -w",
-    "analyze": "ANALYZE=true next build --webpack",
-    "lint": "npm run eslint:base && npm run stylelint",
-    "lint:fix": "npm run eslint:base -- --fix && npm run stylelint -- --fix",
-    "eslint:base": "eslint . --cache --cache-location .cache/eslint/ --no-warn-ignored",
-    "storybook": "storybook dev -p 6006",
-    "build:storybook": "storybook build"
   },
   "maintainers": [
     {
@@ -39,16 +14,33 @@
       "url": "https://shaadcode.ir"
     }
   ],
+  "scripts": {
+    "dev": "next dev --experimental-https",
+    "typegen": "next typegen",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "npm run typegen && tsc --noEmit",
+    "build:safe": "npm run typecheck && npm run lint:fix && npm run test:base && npm run build:storybook && npm run build ",
+    "build:safe-ci": "npm run typecheck && npm run lint && npm run test:base && npm run build-storybook && npm run build",
+    "test:base": "vitest run --config ./vitest.config.ts",
+    "test:storybook": "npm run test:base --project=storybook",
+    "test:storybook-watch": "npm run test:sb -- -w",
+    "storybook": "storybook dev -p 6006",
+    "build:storybook": "storybook build",
+    "lint": "ultracite check",
+    "lint:fix": "ultracite fix"
+  },
   "dependencies": {
     "@arkenv/core": "^1.0.0-rc.4",
     "@arkenv/nextjs": "^1.0.0-rc.5",
     "@mantine/core": "^9.7.4",
     "@mantine/form": "^9.7.4",
     "@mantine/hooks": "^9.7.4",
+    "@swc/core": "^1.16.20",
     "@tabler/icons-react": "^3.50.0",
     "@tanstack/react-query": "^5.105.0",
     "arktype": "^2.2.9",
-    "next": "16.4.3",
+    "next": "^16.4.3",
     "next-intl": "^4.14.9",
     "react": "19.3.1",
     "react-dom": "19.3.1"
@@ -56,7 +48,6 @@
   "devDependencies": {
     "@eslint-react/eslint-plugin": "^5.28.8",
     "@next/bundle-analyzer": "^16.4.3",
-    "@next/eslint-plugin-next": "^16.4.3",
     "@storybook/addon-a11y": "^10.6.5",
     "@storybook/addon-docs": "^10.6.5",
     "@storybook/addon-mcp": "^10.6.5",
@@ -67,20 +58,29 @@
     "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "@typescript/native": "npm:typescript@^7.0.2",
     "@vitest/browser-playwright": "^5.0.5",
     "@vitest/coverage-v8": "^5.0.5",
     "babel-plugin-react-compiler": "1.0.0",
-    "eslint-plugin-storybook": "10.6.5",
+    "oxfmt": "^0.74.0",
+    "oxlint": "^1.89.0",
+    "oxlint-tsgolint": "^7.0.2005",
     "playwright": "1.61.0",
     "postcss": "^8.5.32",
     "postcss-preset-mantine": "^1.18.0",
     "postcss-simple-vars": "^7.0.1",
     "storybook": "^10.6.5",
-    "stylelint": "^17.16.0",
     "stylelint-config-standard-scss": "^17.0.0",
-    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "typescript": "^7.0.2",
+    "ultracite": "8.1.0",
     "vite": "^8.3.5",
     "vitest": "^5.0.5"
-  }
+  },
+  "overrides": {
+    "@swc/core": "1.16.0"
+  },
+  "engines": {
+    "bun": ">=1.4",
+    "node": ">=24"
+  },
+  "packageManager": "bun@1.4.2"
 }

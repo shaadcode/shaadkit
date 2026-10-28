@@ -1,3 +1,1 @@
-import OverviewDashboardPage from '@/_pages/Dashboard/Overview/Overview';
-
-export default OverviewDashboardPage;
+export { default } from "@/_pages/Dashboard/Overview/Overview";

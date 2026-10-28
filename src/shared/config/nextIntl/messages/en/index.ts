@@ -1,7 +1,7 @@
-import enAuthMessages from './auth.json';
-import enCommonMessages from './common.json';
-import enDashboardMessages from './dashboard.json';
-import enProfileMessages from './profile.json';
+import enAuthMessages from "./auth.json";
+import enCommonMessages from "./common.json";
+import enDashboardMessages from "./dashboard.json";
+import enProfileMessages from "./profile.json";
 
 const enMessages = {
   common: enCommonMessages,

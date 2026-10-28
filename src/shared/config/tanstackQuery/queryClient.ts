@@ -1,7 +1,7 @@
-import { QueryClient } from '@tanstack/react-query';
+import { QueryClient } from "@tanstack/react-query";
 
-export function rootQueryClient() {
+export const rootQueryClient = () => {
   const queryClient = new QueryClient();
 
   return queryClient;
-}
+};

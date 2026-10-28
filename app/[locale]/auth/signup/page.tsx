@@ -1,3 +1,1 @@
-import SignupPage from '@/_pages/Auth/Signup/Signup';
-
-export default SignupPage;
+export { default } from "@/_pages/Auth/Signup/Signup";

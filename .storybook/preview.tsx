@@ -1,38 +1,43 @@
-import type { Decorator } from '@storybook/nextjs-vite';
+import { DirectionProvider, MantineProvider } from "@mantine/core";
+import type { Decorator } from "@storybook/nextjs-vite";
+import { NextIntlClientProvider } from "next-intl";
+import type { Context } from "storybook/internal/telemetry";
 
-import { DirectionProvider, MantineProvider } from '@mantine/core';
-import { NextIntlClientProvider } from 'next-intl';
-import { themeFactory } from '@/shared/config/mantine/theme';
-import messages from '@/shared/config/nextIntl/messages';
-import { routing } from '@/shared/config/nextIntl/routing';
-import { getDir } from '@/shared/lib/nextIntlExtended';
+import { themeFactory } from "@/shared/config/mantine/theme";
+import messages from "@/shared/config/nextIntl/messages";
+import { routing } from "@/shared/config/nextIntl/routing";
 
-import '@mantine/core/styles.css';
-import './../app/[locale]/globals.css';
+import "@mantine/core/styles.css";
+import { getDir } from "@/shared/lib/nextIntlExtended";
+
+import "./../app/[locale]/globals.css";
 
 const theme = themeFactory();
-const getStorybookLocale = (ctx: any) => ctx.globals.locale as (typeof routing.defaultLocale) || routing.defaultLocale;
+const getStorybookLocale = (ctx: Context) =>
+  // oxlint-disable-next-line typescript/no-unsafe-member-access
+  (ctx["globals"]["locale"] as typeof routing.defaultLocale) ||
+  routing.defaultLocale;
 
 export const globalTypes = {
   theme: {
-    name: 'Theme',
-    description: 'color scheme',
-    defaultValue: 'light',
+    name: "Theme",
+    description: "color scheme",
+    defaultValue: "light",
     toolbar: {
-      icon: 'mirror',
+      icon: "mirror",
       items: [
-        { value: 'light', title: 'Light' },
-        { value: 'dark', title: 'Dark' },
+        { value: "light", title: "Light" },
+        { value: "dark", title: "Dark" },
       ],
     },
   },
   locale: {
     toolbar: {
-      icon: 'globe',
+      icon: "globe",
       items: [
         {
-          value: 'en',
-          title: 'English',
+          value: "en",
+          title: "English",
         },
       ],
     },
@@ -44,8 +49,10 @@ export const decorators = [
     const locale = getStorybookLocale(context);
     const direction = getDir(locale);
     const localeMessages = messages[locale];
-    const scheme = (context.globals['theme'] || 'light') as 'light' | 'dark';
-    const isDisableForceColorScheme = context.parameters['disableForceColorScheme'] as boolean;
+    const scheme = (context.globals["theme"] ?? "light") as "light" | "dark";
+    const isDisableForceColorScheme = context.parameters[
+      "disableForceColorScheme"
+    ] as boolean;
     return (
       <NextIntlClientProvider locale={locale} messages={localeMessages}>
         <DirectionProvider detectDirection={false} initialDirection={direction}>
@@ -61,13 +68,13 @@ export const decorators = [
       </NextIntlClientProvider>
     );
   },
-] as Array<Decorator>;
+] as Decorator[];
 
 export const parameters = {
   a11y: {
     // 'todo' - show a11y violations in the test UI only
     // 'error' - fail CI on a11y violations
     // 'off' - skip a11y checks entirely
-    test: 'todo'
-  }
+    test: "todo",
+  },
 };

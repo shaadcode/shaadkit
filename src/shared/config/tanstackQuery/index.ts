@@ -1,5 +1,1 @@
-import { rootQueryClient } from '@/shared/config/tanstackQuery/queryClient';
-
-export {
-  rootQueryClient,
-};
+export { rootQueryClient } from "@/shared/config/tanstackQuery/queryClient";

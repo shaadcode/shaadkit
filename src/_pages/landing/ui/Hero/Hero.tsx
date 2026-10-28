@@ -1,29 +1,36 @@
-'use client';
-import { Anchor, Button, Code, Group, SegmentedControl, Stack, Text, Title, useMantineColorScheme } from '@mantine/core';
+"use client";
+import {
+  Anchor,
+  Button,
+  Code,
+  Group,
+  SegmentedControl,
+  Stack,
+  Text,
+  Title,
+  useMantineColorScheme,
+} from "@mantine/core";
 
-function Hero() {
+const Hero = () => {
   const { setColorScheme, colorScheme } = useMantineColorScheme();
   return (
     <Stack px="sm" h="100%" justify="center" align="center">
-      <Stack style={{ flexDirection: 'column' }} component="main">
+      <Stack style={{ flexDirection: "column" }} component="main">
         <Title tt="capitalize">
-          <Code fz={36}>ShaadKit</Code>
-          {' '}
-          —
+          <Code fz={36}>ShaadKit</Code> —
           <br />
           your Next.js starting point
         </Title>
         <Text maw={400}>
-          A modern, batteries-included Next.js frontend boilerplate - ready for production.
-          {' '}
+          A modern, batteries-included Next.js frontend boilerplate - ready for
+          production.{" "}
           <Anchor
             href="https://github.com/shaadcode/shaadkit"
             target="_blank"
             rel="noopener noreferrer"
           >
             Read the docs
-          </Anchor>
-          {' '}
+          </Anchor>{" "}
           to get started.
         </Text>
         <Group grow>
@@ -49,11 +56,11 @@ function Hero() {
         <SegmentedControl
           value={colorScheme}
           onChange={setColorScheme}
-          data={['light', 'dark', 'auto']}
+          data={["light", "dark", "auto"]}
         />
       </Stack>
     </Stack>
   );
-}
+};
 
 export default Hero;

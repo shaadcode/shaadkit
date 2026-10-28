@@ -1,11 +1,12 @@
-import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+// oxlint-disable typescript/no-unsafe-member-access typescript/ban-ts-comment
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { expect } from "storybook/test";
 
-import { expect } from 'storybook/test';
-import Hero from './Hero';
+import Hero from "./Hero";
 
 const meta = {
   component: Hero,
-  title: 'pages/landing',
+  title: "pages/landing",
 } satisfies Meta<typeof Hero>;
 
 export default meta;
@@ -17,33 +18,29 @@ export const Theme: Story = {
     disableForceColorScheme: true,
   },
   play: async ({ canvas, step, userEvent }) => {
-    await step(
-      'dark theme',
-      async () => {
-        const lightControl = canvas.getByLabelText('dark');
+    await step("dark theme", async () => {
+      const lightControl = canvas.getByLabelText("dark");
 
-        if (!lightControl.nextElementSibling) {
-          throw new Error('dark control is null');
-        }
+      if (!lightControl.nextElementSibling) {
+        throw new Error("dark control is null");
+      }
 
-        await userEvent.click(lightControl.nextElementSibling);
-        const rootHtml = document.querySelector('[data-mantine-color-scheme]');
-        await expect(rootHtml?.getAttribute('data-mantine-color-scheme')).toEqual('dark');
-      },
-    );
-    await step(
-      'light theme',
-      async () => {
-        const lightControl = canvas.getByLabelText('light');
+      await userEvent.click(lightControl.nextElementSibling);
+      const rootHtml = document.querySelector("[data-mantine-color-scheme]");
+      // @ts-expect-error
+      await expect(rootHtml?.dataset?.["mantineColorScheme"]).toEqual("dark");
+    });
+    await step("light theme", async () => {
+      const lightControl = canvas.getByLabelText("light");
 
-        if (!lightControl.nextElementSibling) {
-          throw new Error('light control is null');
-        }
+      if (!lightControl.nextElementSibling) {
+        throw new Error("light control is null");
+      }
 
-        await userEvent.click(lightControl.nextElementSibling);
-        const rootHtml = document.querySelector('[data-mantine-color-scheme]');
-        await expect(rootHtml?.getAttribute('data-mantine-color-scheme')).toEqual('light');
-      },
-    );
+      await userEvent.click(lightControl.nextElementSibling);
+      const rootHtml = document.querySelector("[data-mantine-color-scheme]");
+      // @ts-expect-error
+      await expect(rootHtml?.dataset?.["mantineColorScheme"]).toEqual("light");
+    });
   },
 };

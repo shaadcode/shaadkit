@@ -1,11 +1,5 @@
-import Hero from '@/_pages/landing/ui/Hero/Hero';
+import Hero from "@/_pages/landing/ui/Hero/Hero";
 
-function LandingPage() {
-  return (
-    <>
-      <Hero />
-    </>
-  );
-}
+const LandingPage = () => <Hero />;
 
 export default LandingPage;

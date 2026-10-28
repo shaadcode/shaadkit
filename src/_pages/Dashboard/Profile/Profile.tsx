@@ -1,50 +1,76 @@
-'use client';
-import { Avatar, Badge, Button, Card, Divider, FileButton, Group, Paper, PasswordInput, SimpleGrid, Stack, Tabs, Text, Textarea, TextInput, Title } from '@mantine/core';
-import { useForm } from '@mantine/form';
-import { IconDeviceFloppy, IconLock, IconMail, IconPhone, IconSchool, IconTrash, IconUpload, IconUser } from '@tabler/icons-react';
-import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+"use client";
+import {
+  Avatar,
+  Badge,
+  Button,
+  Card,
+  Divider,
+  FileButton,
+  Group,
+  Paper,
+  PasswordInput,
+  SimpleGrid,
+  Stack,
+  Tabs,
+  Text,
+  Textarea,
+  TextInput,
+  Title,
+} from "@mantine/core";
+import { useForm } from "@mantine/form";
+import {
+  IconDeviceFloppy,
+  IconLock,
+  IconMail,
+  IconPhone,
+  IconSchool,
+  IconTrash,
+  IconUpload,
+  IconUser,
+} from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 
-export default function ProfilePage() {
-  const t = useTranslations('profile');
-  const tCommon = useTranslations('common');
+const ProfilePage = () => {
+  const t = useTranslations("profile");
+  const tCommon = useTranslations("common");
   const [avatar, setAvatar] = useState<string | null>(null);
 
   const profileForm = useForm({
     initialValues: {
-      fullName: 'Seyed Mojtaba Shadab',
-      email: 'shaadcode@gmail.com',
-      phone: '+98 912 000 0000',
-      school: 'ShaadKit Academy',
-      bio: '',
+      fullName: "Seyed Mojtaba Shadab",
+      email: "shaadcode@gmail.com",
+      phone: "+98 912 000 0000",
+      school: "ShaadKit Academy",
+      bio: "",
     },
   });
 
   const passwordForm = useForm({
     initialValues: {
-      currentPassword: '',
-      newPassword: '',
-      confirmPassword: '',
+      currentPassword: "",
+      newPassword: "",
+      confirmPassword: "",
     },
   });
 
   const handleProfileSubmit = (values: typeof profileForm.values) => {
     // eslint-disable-next-line no-console
-    console.log('profile', values);
+    console.log("profile", values);
   };
 
   const handlePasswordSubmit = (values: typeof passwordForm.values) => {
     // eslint-disable-next-line no-console
-    console.log('password', values);
+    console.log("password", values);
   };
 
   return (
     <Stack gap="lg">
       {/* Header */}
       <div>
-        <Title order={3}>{t('title')}</Title>
+        <Title order={3}>{t("title")}</Title>
         <Text c="dimmed" fz="sm">
-          {t('description')}
+          {t("description")}
         </Text>
       </div>
 
@@ -61,7 +87,7 @@ export default function ProfilePage() {
                 {profileForm.values.email}
               </Text>
               <Badge mt="xs" color="blue" variant="light">
-                {t('role.student')}
+                {t("role.student")}
               </Badge>
             </div>
           </Group>
@@ -69,14 +95,19 @@ export default function ProfilePage() {
           <Group gap="xs">
             <FileButton
               onChange={(file) => {
-                if (file)
+                if (file) {
                   setAvatar(URL.createObjectURL(file));
+                }
               }}
               accept="image/png,image/jpeg"
             >
-              {props => (
-                <Button {...props} variant="default" leftSection={<IconUpload size={16} />}>
-                  {t('actions.upload')}
+              {(props) => (
+                <Button
+                  {...props}
+                  variant="default"
+                  leftSection={<IconUpload size={16} />}
+                >
+                  {t("actions.upload")}
                 </Button>
               )}
             </FileButton>
@@ -85,9 +116,11 @@ export default function ProfilePage() {
               variant="subtle"
               color="red"
               leftSection={<IconTrash size={16} />}
-              onClick={() => setAvatar(null)}
+              onClick={() => {
+                setAvatar(null);
+              }}
             >
-              {t('actions.remove')}
+              {t("actions.remove")}
             </Button>
           </Group>
         </Group>
@@ -97,10 +130,10 @@ export default function ProfilePage() {
       <Tabs defaultValue="general">
         <Tabs.List>
           <Tabs.Tab value="general" leftSection={<IconUser size={16} />}>
-            {t('tabs.general')}
+            {t("tabs.general")}
           </Tabs.Tab>
           <Tabs.Tab value="security" leftSection={<IconLock size={16} />}>
-            {t('tabs.security')}
+            {t("tabs.security")}
           </Tabs.Tab>
         </Tabs.List>
 
@@ -111,33 +144,33 @@ export default function ProfilePage() {
               <Stack gap="md">
                 <SimpleGrid cols={{ base: 1, sm: 2 }}>
                   <TextInput
-                    label={tCommon('fullName')}
+                    label={tCommon("fullName")}
                     leftSection={<IconUser size={16} />}
-                    {...profileForm.getInputProps('fullName')}
+                    {...profileForm.getInputProps("fullName")}
                   />
                   <TextInput
-                    label={tCommon('email')}
+                    label={tCommon("email")}
                     leftSection={<IconMail size={16} />}
-                    {...profileForm.getInputProps('email')}
+                    {...profileForm.getInputProps("email")}
                   />
                   <TextInput
-                    label={t('fields.phone')}
+                    label={t("fields.phone")}
                     leftSection={<IconPhone size={16} />}
-                    {...profileForm.getInputProps('phone')}
+                    {...profileForm.getInputProps("phone")}
                   />
                   <TextInput
-                    label={t('fields.school')}
+                    label={t("fields.school")}
                     leftSection={<IconSchool size={16} />}
-                    {...profileForm.getInputProps('school')}
+                    {...profileForm.getInputProps("school")}
                   />
                 </SimpleGrid>
 
                 <Textarea
-                  label={t('fields.bio')}
-                  placeholder={t('fields.bioPlaceholder')}
+                  label={t("fields.bio")}
+                  placeholder={t("fields.bioPlaceholder")}
                   minRows={3}
                   autosize
-                  {...profileForm.getInputProps('bio')}
+                  {...profileForm.getInputProps("bio")}
                 />
 
                 <Group justify="flex-end">
@@ -146,7 +179,7 @@ export default function ProfilePage() {
                     color="dark"
                     leftSection={<IconDeviceFloppy size={16} />}
                   >
-                    {tCommon('save')}
+                    {tCommon("save")}
                   </Button>
                 </Group>
               </Stack>
@@ -160,23 +193,27 @@ export default function ProfilePage() {
             <form onSubmit={passwordForm.onSubmit(handlePasswordSubmit)}>
               <Stack gap="md" maw={480}>
                 <PasswordInput
-                  label={t('fields.currentPassword')}
-                  {...passwordForm.getInputProps('currentPassword')}
+                  label={t("fields.currentPassword")}
+                  {...passwordForm.getInputProps("currentPassword")}
                 />
                 <PasswordInput
-                  label={t('fields.newPassword')}
-                  {...passwordForm.getInputProps('newPassword')}
+                  label={t("fields.newPassword")}
+                  {...passwordForm.getInputProps("newPassword")}
                 />
                 <PasswordInput
-                  label={tCommon('confirmPassword')}
-                  {...passwordForm.getInputProps('confirmPassword')}
+                  label={tCommon("confirmPassword")}
+                  {...passwordForm.getInputProps("confirmPassword")}
                 />
 
                 <Divider />
 
                 <Group justify="flex-end">
-                  <Button type="submit" color="dark" leftSection={<IconLock size={16} />}>
-                    {t('actions.updatePassword')}
+                  <Button
+                    type="submit"
+                    color="dark"
+                    leftSection={<IconLock size={16} />}
+                  >
+                    {t("actions.updatePassword")}
                   </Button>
                 </Group>
               </Stack>
@@ -186,4 +223,6 @@ export default function ProfilePage() {
       </Tabs>
     </Stack>
   );
-}
+};
+
+export default ProfilePage;
