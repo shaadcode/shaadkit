@@ -6,7 +6,6 @@ import storybook from "ultracite/oxlint/storybook";
 import tanstack from "ultracite/oxlint/tanstack";
 import vitest from "ultracite/oxlint/vitest";
 
-
 export default defineConfig({
   env: core.env,
   extends: [core, react, tanstack, next, storybook, vitest],

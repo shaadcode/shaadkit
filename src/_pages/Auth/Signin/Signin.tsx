@@ -1,21 +1,21 @@
 "use client";
-import ClientLink from "@/shared/lib/nextExtended";
 import {
-    Anchor,
-    Button,
-    Checkbox,
-    Divider,
-    Group,
-    Paper,
-    PasswordInput,
-    Stack,
-    Text,
-    TextInput,
-    Title,
+  Anchor,
+  Button,
+  Checkbox,
+  Divider,
+  Group,
+  Paper,
+  PasswordInput,
+  Stack,
+  Text,
+  TextInput,
+  Title,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { useTranslations } from "next-intl";
 
+import ClientLink from "@/shared/lib/nextExtended";
 
 const SigninPage = () => {
   const t = useTranslations("auth.signin");

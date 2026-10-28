@@ -1,18 +1,18 @@
 "use client";
-import ClientLink from "@/shared/lib/nextExtended";
 import {
-    Anchor,
-    Button,
-    Paper,
-    Stack,
-    Text,
-    TextInput,
-    Title,
+  Anchor,
+  Button,
+  Paper,
+  Stack,
+  Text,
+  TextInput,
+  Title,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 
+import ClientLink from "@/shared/lib/nextExtended";
 
 const ForgotPasswordPage = () => {
   const t = useTranslations("auth.forgotPassword");

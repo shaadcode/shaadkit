@@ -1,35 +1,35 @@
 "use client";
 import {
-    AppShell,
-    Avatar,
-    Burger,
-    Group,
-    Menu,
-    NavLink,
-    Stack,
-    Text,
-    Title,
-    UnstyledButton,
+  AppShell,
+  Avatar,
+  Burger,
+  Group,
+  Menu,
+  NavLink,
+  Stack,
+  Text,
+  Title,
+  UnstyledButton,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import {
-    IconBell,
-    IconBook,
-    IconCalendar,
-    IconChartBar,
-    IconClipboardList,
-    IconHome,
-    IconLogout,
-    IconSettings,
-    IconUser,
+  IconBell,
+  IconBook,
+  IconCalendar,
+  IconChartBar,
+  IconClipboardList,
+  IconHome,
+  IconLogout,
+  IconSettings,
+  IconUser,
 } from "@tabler/icons-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useLayoutEffect } from "react";
 
 import { redirect, usePathname } from "@/shared/config/nextIntl/navigation";
 import { ThemeToggle } from "@/shared/lib/mantineExtended";
-
 import ClientLink from "@/shared/lib/nextExtended";
+
 import classes from "./index.module.css";
 
 const DashboardLayout = (props: LayoutProps<"/[locale]/dashboard">) => {
